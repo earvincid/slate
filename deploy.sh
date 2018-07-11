@@ -21,7 +21,8 @@ Options:
 
 
 run_build() {
-  bundle exec middleman build --clean
+  rm -rf source/build
+  bundle exec middleman build --build-dir=source/build --clean
 }
 
 parse_args() {
